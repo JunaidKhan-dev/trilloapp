@@ -1,0 +1,60 @@
+/* breakpoints for this project
+min-width:1200px  default
+max-width:1200px - 75em (redzone)  remove red bg
+max-width:1100px - 68.75em (ipads) 
+max-width:900px -  56.25em (tabs)
+max-width:600px - 37.5em (phone)
+max-width:500px - 31.25em (miniphone)
+
+
+
+
+
+
+
+
+
+*/
+
+
+@mixin respond ($breakpoint){
+
+@if $breakpoint==redzone {
+
+@media only screen and (max-width:75em) { @content };
+
+}
+
+@if $breakpoint==ipads{
+
+    @media only screen and (max-width:68.75em) {@content};
+    
+    }
+
+    @if $breakpoint==tabs{
+
+        @media only screen and (max-width:56.25em) {@content};
+        
+        }
+
+    @if $breakpoint==phone{
+
+        @media only screen and (max-width:37.5em) {@content};
+
+
+    }
+
+    @if $breakpoint==miniphone{
+
+        @media only screen and (max-width:31.25em) {@content};
+
+
+    }
+    
+    
+
+
+
+
+
+}
